@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\BulletMovement.cs" />
     <Compile Include="Assets\Scripts\BulletSpawn.cs" />
+    <Compile Include="Assets\Scripts\EntitySpawn.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/taymcken/Documents/GitHub/Ultimate-Asteroid-Tactical-Control/Ultimate Asteroid Tactical Control/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

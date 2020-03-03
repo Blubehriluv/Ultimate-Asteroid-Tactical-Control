@@ -15,6 +15,8 @@ public class EntitySpawn : MonoBehaviour
     public int floater_amount;
     private int floater_remain;
 
+    private GameObject spawnThis;
+
     private int totalEntities;
     private int chosenEnt;
     private int spawnLocationNumber;
@@ -56,7 +58,7 @@ public class EntitySpawn : MonoBehaviour
     void SpawnAvailable()
     {
         Debug.Log("Checking to see if space to spawn is available!");
-        if (spawnedEntities == 2)
+        if (spawnedEntities == 3)
         {
             StartCoroutine(nameof(noWaiter));
         }
@@ -93,6 +95,7 @@ public class EntitySpawn : MonoBehaviour
     {
         Debug.Log("Choosing an entity to be spawned.");
         var coinFlip = Random.Range(1, 3);
+        Debug.Log(coinFlip);
         chosenEnt = coinFlip;
     }
 
@@ -106,58 +109,60 @@ public class EntitySpawn : MonoBehaviour
         {
             Debug.Log("Chose targeter");
             targeter_remain = targeter_remain - 1;
+            spawnThis = Targeter;
         }
         else if (chosenEnt == 2)
         {
             Debug.Log("Chose floater");
             floater_remain = floater_remain - 1;
+            spawnThis = Floater;
         }
 
         ChooseLocation();
         switch (spawnLocationNumber)
         {
             case 1:
-                Instantiate(Targeter, spawnPoint1.position, spawnPoint1.rotation);
+                Instantiate(spawnThis, spawnPoint1.position, spawnPoint1.rotation);
                 Debug.Log("location 1");
                 break;
             case 2:
-                Instantiate(Targeter, spawnPoint2.position, spawnPoint2.rotation);
+                Instantiate(spawnThis, spawnPoint2.position, spawnPoint2.rotation);
                 Debug.Log("location 2");
                 break;
             case 3:
-                Instantiate(Targeter, spawnPoint3.position, spawnPoint3.rotation);
+                Instantiate(spawnThis, spawnPoint3.position, spawnPoint3.rotation);
                 Debug.Log("location 3");
                 break;
             case 4:
-                Instantiate(Targeter, spawnPoint4.position, spawnPoint4.rotation);
+                Instantiate(spawnThis, spawnPoint4.position, spawnPoint4.rotation);
                 Debug.Log("location 4");
                 break;
             case 5:
-                Instantiate(Targeter, spawnPoint5.position, spawnPoint5.rotation);
+                Instantiate(spawnThis, spawnPoint5.position, spawnPoint5.rotation);
                 Debug.Log("location 5");
                 break;
             case 6:
-                Instantiate(Targeter, spawnPoint6.position, spawnPoint6.rotation);
+                Instantiate(spawnThis, spawnPoint6.position, spawnPoint6.rotation);
                 Debug.Log("location 6");
                 break;
             case 7:
-                Instantiate(Targeter, spawnPoint7.position, spawnPoint7.rotation);
+                Instantiate(spawnThis, spawnPoint7.position, spawnPoint7.rotation);
                 Debug.Log("location 7");
                 break;
             case 8:
-                Instantiate(Targeter, spawnPoint8.position, spawnPoint8.rotation);
+                Instantiate(spawnThis, spawnPoint8.position, spawnPoint8.rotation);
                 Debug.Log("location 8");
                 break;
             case 9:
-                Instantiate(Targeter, spawnPoint9.position, spawnPoint9.rotation);
+                Instantiate(spawnThis, spawnPoint9.position, spawnPoint9.rotation);
                 Debug.Log("location 9");
                 break;
             case 10:
-                Instantiate(Targeter, spawnPoint10.position, spawnPoint10.rotation);
+                Instantiate(spawnThis, spawnPoint10.position, spawnPoint10.rotation);
                 Debug.Log("location 10");
                 break;
             default:
-                Console.WriteLine("Help, something broke with Targeters.");
+                Console.WriteLine("Help, something broke with spawning.");
                 break;
         }
 

@@ -107,15 +107,31 @@ public class EntitySpawn : MonoBehaviour
         ChooseEntity();
         if (chosenEnt == 1)
         {
-            Debug.Log("Chose targeter");
-            targeter_remain = targeter_remain - 1;
-            spawnThis = Targeter;
+            if (targeter_remain != 0)
+            {
+                Debug.Log("Chose targeter");
+                targeter_remain = targeter_remain - 1;
+                spawnThis = Targeter;
+            }
+            else
+            {
+                spawnThis = Floater;
+            }
+            
         }
         else if (chosenEnt == 2)
         {
-            Debug.Log("Chose floater");
-            floater_remain = floater_remain - 1;
-            spawnThis = Floater;
+            if (floater_remain != 0)
+            {
+                Debug.Log("Chose floater");
+                floater_remain = floater_remain - 1;
+                spawnThis = Floater;
+            }
+            else
+            {
+                spawnThis = Targeter;
+            }
+            
         }
 
         ChooseLocation();

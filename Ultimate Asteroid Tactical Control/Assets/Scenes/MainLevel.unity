@@ -595,6 +595,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 45.5}
   m_EdgeRadius: 0
+--- !u!1 &1916927570 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 14118055314392472, guid: ffd62e96c4628e240a259db0a8d0f7a9,
+    type: 3}
+  m_PrefabInstance: {fileID: 14118055530031266}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1916927571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916927570}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fda57bc171e0744eae17cb0d034224f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desiredNumOfEnemies: 0
+  currentNumOfEnemies: 3
+  timeBeforeChecking: 3
+  SpawnTransforms: []
+  TypesOfEnemies:
+  - {fileID: 3946156712591585028, guid: 26f87bc18663f2643a8d5022f6095e8e, type: 3}
+  - {fileID: 3381643741631061262, guid: 4b0538558a6abfb46a9b0f82ca7f6190, type: 3}
 --- !u!1 &1979681142
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,6 +810,16 @@ PrefabInstance:
         type: 3}
       propertyPath: floater_amount
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071977203650770031, guid: ffd62e96c4628e240a259db0a8d0f7a9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4071977203650770031, guid: ffd62e96c4628e240a259db0a8d0f7a9,
+        type: 3}
+      propertyPath: waitTime
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffd62e96c4628e240a259db0a8d0f7a9, type: 3}

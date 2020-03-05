@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class DeathBoxDeath : MonoBehaviour
 {
+    public GameObject bullet;
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -18,10 +18,22 @@ public class DeathBoxDeath : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other)
+        if (GameObject.FindGameObjectWithTag("Projectile"))
+        {
+            Debug.Log("STOP SHOOTING AT MEEEE! DAAAAAMN! ASSHOOOOLE!");
+        }
+        else if (GameObject.FindGameObjectWithTag("Player"))
         {
             Debug.Log("dont fooken touch me m8");
-            Destroy(other.gameObject);
+            DeathCount.KilledByBox += 1;
+
         }
+        else if (GameObject.FindGameObjectWithTag("Enemy"))
+        {
+            DeathCount.KilledByBox += 1;
+            DeathCount.PlayingFieldCount -= 1;
+            DeathCount.TotalKilled += 1;
+        }
+        Destroy(other.gameObject);
     }
 }

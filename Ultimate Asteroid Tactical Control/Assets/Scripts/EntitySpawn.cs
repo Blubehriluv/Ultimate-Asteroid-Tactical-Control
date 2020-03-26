@@ -56,11 +56,11 @@ public class EntitySpawn : MonoBehaviour
     void SpawnAvailable()
     {
         Debug.Log("Checking to see if space to spawn is available!");
-        if (DeathCount.PlayingFieldCount == 3)
+        if (DeathCount.PlayingFieldCount >= 3)
         {
             StartCoroutine(nameof(noWaiter));
         }
-        else
+        if (DeathCount.PlayingFieldCount < 3)
         {
             StartCoroutine(nameof(yesWaiter));
         }

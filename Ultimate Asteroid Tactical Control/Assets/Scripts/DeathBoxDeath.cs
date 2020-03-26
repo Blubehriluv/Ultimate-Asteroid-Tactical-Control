@@ -22,18 +22,22 @@ public class DeathBoxDeath : MonoBehaviour
         {
             Debug.Log("STOP SHOOTING AT MEEEE! DAAAAAMN! ASSHOOOOLE!");
         }
+
+        else if (GameObject.FindGameObjectWithTag("Enemy"))
+        {
+            Debug.Log("Enemy has been killed");
+            DeathCount.KilledByBox += 1;
+            DeathCount.PlayingFieldCount -= 1;
+            DeathCount.TotalKilled += 1;
+        }
+
         else if (GameObject.FindGameObjectWithTag("Player"))
         {
             Debug.Log("dont fooken touch me m8");
             DeathCount.KilledByBox += 1;
 
         }
-        else if (GameObject.FindGameObjectWithTag("Enemy"))
-        {
-            DeathCount.KilledByBox += 1;
-            DeathCount.PlayingFieldCount -= 1;
-            DeathCount.TotalKilled += 1;
-        }
+        
         Destroy(other.gameObject);
     }
 }

@@ -117,7 +117,7 @@ public class EntitySpawn : MonoBehaviour
                 {
                     spawnThis = Floater;
                 }
-                
+                totalEntities -= 1;
             }
             else if (chosenEnt == 2)
             {
@@ -131,7 +131,7 @@ public class EntitySpawn : MonoBehaviour
                 {
                     spawnThis = Targeter;
                 }
-            
+                totalEntities -= 1;
             }
 
             ChooseLocation();

@@ -9,6 +9,7 @@ public class FloaterController : MonoBehaviour
     private Transform tf;
     public Transform targetPosition;
     private bool alive;
+    private int destroyTime = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -37,5 +38,37 @@ public class FloaterController : MonoBehaviour
     {
         turnSpeed = 0;
         tf.position += (tf.TransformDirection(Vector3.up) * speed * Time.deltaTime);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (GameObject.FindGameObjectWithTag("Projectile"))
+        {
+            Debug.Log("Big Death");
+            DeathCount.KilledByBullet += 1;
+            DeathCount.TotalKilledByPlayer += 1;
+            DeathCount.PlayingFieldCount -= 1;
+            DeathCount.TotalKilled += 1;
+            Destroy(gameObject, destroyTime);
+        }
+
+        else if (GameObject.FindGameObjectWithTag("Enemy"))
+        {
+            Debug.Log("COLLISION");
+            DeathCount.KilledByCol += 1;
+            DeathCount.PlayingFieldCount -= 1;
+            DeathCount.TotalKilled += 1;
+            Destroy(gameObject, destroyTime);
+        }
+
+        else if (GameObject.FindGameObjectWithTag("Player"))
+        {
+            Debug.Log("We die together.");
+            DeathCount.TotalKilledByPlayer += 1;
+            DeathCount.PlayingFieldCount -= 1;
+            DeathCount.TotalKilled += 1;
+            DeathCount.KilledByCol += 1;
+            Destroy(gameObject, destroyTime);
+        }
     }
 }

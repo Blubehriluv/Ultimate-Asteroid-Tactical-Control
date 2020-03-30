@@ -17,7 +17,7 @@ public class EntitySpawn : MonoBehaviour
 
     private GameObject spawnThis;
 
-    private int totalEntities;
+    public static int totalEntities;
     private int chosenEnt;
     private int spawnLocationNumber;
 

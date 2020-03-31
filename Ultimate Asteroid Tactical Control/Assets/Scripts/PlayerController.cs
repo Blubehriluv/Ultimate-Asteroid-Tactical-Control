@@ -43,10 +43,10 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             //Movement with Force
-            rb.AddForce(transform.up * thrust, ForceMode2D.Impulse);
+            //rb.AddForce(transform.up * thrust, ForceMode2D.Impulse);
 
             //Movement without Force
-            //tf.position += (tf.TransformDirection(Vector3.up) * speed * Time.deltaTime);
+            tf.position += (tf.TransformDirection(Vector3.up) * speed * Time.deltaTime);
         }
 
         //S pulls back

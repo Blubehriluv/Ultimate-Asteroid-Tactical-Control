@@ -8,23 +8,27 @@ public class HUDTracker : MonoBehaviour
 
     public Text enemiesLeftNumber;
     public Text eliminationNumber;
-    public static string holder;
-    public static string holder1;
+    public Text livesNumber;
+    private string entHolder;
+    private string killedHolder;
+    private string lifeHolder;
 
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     void Update()
     {
 
-        holder =  EntitySpawn.totalEntities.ToString();
-        enemiesLeftNumber.text = holder;
+        entHolder =  EntitySpawn.totalEntities.ToString();
+        enemiesLeftNumber.text = entHolder;
 
-        holder1 = DeathCount.TotalKilledByPlayer.ToString();
-        eliminationNumber.text = holder1;
+        killedHolder = DeathCount.TotalKilledByPlayer.ToString();
+        eliminationNumber.text = killedHolder;
+
+        lifeHolder = DeathCount.PlayerLives.ToString();
+        livesNumber.text = lifeHolder;
     }
 }
     

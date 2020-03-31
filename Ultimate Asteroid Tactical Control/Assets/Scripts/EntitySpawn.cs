@@ -68,7 +68,7 @@ public class EntitySpawn : MonoBehaviour
 
     IEnumerator noWaiter()
     {
-        Debug.Log("Cannot spawn now, will check again in 10 seconds.");
+        Debug.Log("Cannot spawn now, will check again in 3 seconds.");
         yield return new WaitForSeconds(waitTime);
         Debug.Log("Seconds complete.");
         SpawnAvailable();
@@ -76,7 +76,7 @@ public class EntitySpawn : MonoBehaviour
 
     IEnumerator yesWaiter()
     {
-        Debug.Log("Space available. Spawning in 6 seconds.");
+        Debug.Log("Space available. Spawning in 3 seconds.");
         yield return new WaitForSeconds(waitTime);
         Debug.Log("Seconds complete.");
         DeathCount.PlayingFieldCount += 1;

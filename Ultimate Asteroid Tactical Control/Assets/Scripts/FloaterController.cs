@@ -47,28 +47,22 @@ public class FloaterController : MonoBehaviour
             Debug.Log("Big Death");
             DeathCount.KilledByBullet += 1;
             DeathCount.TotalKilledByPlayer += 1;
-            DeathCount.PlayingFieldCount -= 1;
-            DeathCount.TotalKilled += 1;
-            Destroy(gameObject, destroyTime);
         }
 
         else if (GameObject.FindGameObjectWithTag("Enemy"))
         {
             Debug.Log("COLLISION");
             DeathCount.KilledByCol += 1;
-            DeathCount.PlayingFieldCount -= 1;
-            DeathCount.TotalKilled += 1;
-            Destroy(gameObject, destroyTime);
         }
 
         else if (GameObject.FindGameObjectWithTag("Player"))
         {
             Debug.Log("We die together.");
             DeathCount.TotalKilledByPlayer += 1;
-            DeathCount.PlayingFieldCount -= 1;
-            DeathCount.TotalKilled += 1;
             DeathCount.KilledByCol += 1;
-            Destroy(gameObject, destroyTime);
         }
+        DeathCount.TotalKilled += 1;
+        DeathCount.PlayingFieldCount -= 1;
+        Destroy(gameObject, destroyTime);
     }
 }

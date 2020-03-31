@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class DeathBoxDeath : MonoBehaviour
 {
-    public GameObject bullet;
+
+    private int destroyTime = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,9 +36,9 @@ public class DeathBoxDeath : MonoBehaviour
         {
             Debug.Log("dont fooken touch me m8");
             DeathCount.KilledByBox += 1;
+            DeathCount.playerAlive = false;
 
         }
-        
-        Destroy(other.gameObject);
+        Destroy(other.gameObject, destroyTime);
     }
 }

@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private Transform tf;
     private float angle = 0.0f;
     public float thrust = 0.5f;
+    private int destroyTime = 0;
 
     // Use this for initialization
     void Start()
@@ -18,6 +19,7 @@ public class PlayerController : MonoBehaviour
         //Creating variables for the transform components
         rb = GetComponent<Rigidbody2D>();
         tf = GetComponent<Transform>();
+        DeathCount.playerAlive = true;
     }
 
     // Update is called once per frame
@@ -37,7 +39,7 @@ public class PlayerController : MonoBehaviour
             tf.rotation = Quaternion.Euler(0, 0, angle);
         }
 
-        //Spacebar pushes forward
+        //W pushes forward
         if (Input.GetKey(KeyCode.W))
         {
             //Movement with Force
@@ -52,5 +54,22 @@ public class PlayerController : MonoBehaviour
         {
             tf.position += (tf.TransformDirection(Vector3.down) * reverseSpeed * Time.deltaTime);
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (GameObject.FindGameObjectWithTag("Enemy"))
+        {
+            Destroy(gameObject, destroyTime);
+            DeathCount.playerAlive = false;
+        }
+
+        else if (GameObject.FindGameObjectWithTag("DeathBox"))
+        {
+        }
+        DeathCount.KilledByCol += 1;
+        DeathCount.PlayerLives -= 1;
+        DeathCount.playerAlive = false;
+        Destroy(gameObject, destroyTime);
     }
 }

@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\BulletDestroy.cs" />
     <Compile Include="Assets\Scripts\BulletMovement.cs" />
     <Compile Include="Assets\Scripts\BulletSpawn.cs" />
+    <Compile Include="Assets\Scripts\CursorBehavior.cs" />
     <Compile Include="Assets\Scripts\DeathBoxDeath.cs" />
     <Compile Include="Assets\Scripts\DeathCount.cs" />
     <Compile Include="Assets\Scripts\EntitySpawn.cs" />

@@ -7,12 +7,13 @@ public class BulletMovement : MonoBehaviour
     private GameObject boolet;
     private Rigidbody2D rb;
     public int destroyTime = 0;
-    public float bulletSpeed = 0.5f;
+    public float bulletSpeed;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        bulletSpeed = VariableHolder.bulletSpeed;
     }
 
     // Update is called once per frame

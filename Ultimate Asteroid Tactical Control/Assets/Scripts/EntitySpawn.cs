@@ -17,7 +17,6 @@ public class EntitySpawn : MonoBehaviour
 
     private GameObject spawnThis;
 
-    public static int totalEntities;
     private int chosenEnt;
     private int spawnLocationNumber;
 
@@ -40,9 +39,13 @@ public class EntitySpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        targeter_remain = targeter_amount;
-        floater_remain = floater_amount;
-        totalEntities = targeter_amount + floater_amount;
+
+        targeter_amount = VariableHolder.targeter_amount;
+        targeter_remain = VariableHolder.targeter_amount;
+        floater_amount = VariableHolder.floater_amount;
+        floater_remain = VariableHolder.floater_amount;
+
+        VariableHolder.totalEntities = VariableHolder.targeter_amount + VariableHolder.floater_amount;
         DeathCount.PlayingFieldCount = 0;
         SpawnAvailable();
     }
@@ -100,7 +103,7 @@ public class EntitySpawn : MonoBehaviour
 
     void SpawnEntity()
     {
-        if (totalEntities != 0)
+        if (VariableHolder.totalEntities != 0)
         {
             Debug.Log("Space is available, spawning an entitiy!");
 
@@ -117,7 +120,7 @@ public class EntitySpawn : MonoBehaviour
                 {
                     spawnThis = Floater;
                 }
-                totalEntities -= 1;
+                VariableHolder.totalEntities -= 1;
             }
             else if (chosenEnt == 2)
             {
@@ -131,7 +134,7 @@ public class EntitySpawn : MonoBehaviour
                 {
                     spawnThis = Targeter;
                 }
-                totalEntities -= 1;
+                VariableHolder.totalEntities -= 1;
             }
 
             ChooseLocation();

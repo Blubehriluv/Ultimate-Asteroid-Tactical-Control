@@ -21,13 +21,13 @@ public class HUDTracker : MonoBehaviour
     void Update()
     {
 
-        entHolder =  EntitySpawn.totalEntities.ToString();
+        entHolder =  VariableHolder.totalEntities.ToString();
         enemiesLeftNumber.text = entHolder;
 
         killedHolder = DeathCount.TotalKilledByPlayer.ToString();
         eliminationNumber.text = killedHolder;
 
-        lifeHolder = DeathCount.PlayerLives.ToString();
+        lifeHolder = VariableHolder.playerLives.ToString();
         livesNumber.text = lifeHolder;
     }
 }

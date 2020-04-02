@@ -12,15 +12,15 @@ public class DeathCount : MonoBehaviour
     public static int KilledByCol;
     public static int KilledByBullet;
     public static int PlayingFieldCount;
-    public int TotalPlayerLives = 3;
-    public static int PlayerLives;
+    public int PlayerLives;
     public GameObject player;
     public static bool playerAlive;
     // Start is called before the first frame update
     void Start()
     {
+        PlayerLives = VariableHolder.playerLives;
         PlayingFieldCount = 0;
-        PlayerLives = TotalPlayerLives;
+        PlayerLives = VariableHolder.playerLives;
         playerAlive = false;
     }
 

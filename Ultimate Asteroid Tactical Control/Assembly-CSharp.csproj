@@ -68,11 +68,13 @@
     <Compile Include="Assets\Scripts\CursorBehavior.cs" />
     <Compile Include="Assets\Scripts\DeathBoxDeath.cs" />
     <Compile Include="Assets\Scripts\DeathCount.cs" />
+    <Compile Include="Assets\Scripts\DevManager.cs" />
     <Compile Include="Assets\Scripts\EntitySpawn.cs" />
     <Compile Include="Assets\Scripts\FloaterController.cs" />
     <Compile Include="Assets\Scripts\HUDTracker.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\TargeterController.cs" />
+    <Compile Include="Assets\Scripts\VariableHolder.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/taymcken/Documents/GitHub/Ultimate-Asteroid-Tactical-Control/Ultimate Asteroid Tactical Control/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

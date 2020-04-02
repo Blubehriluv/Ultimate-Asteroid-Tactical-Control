@@ -15,7 +15,7 @@ public class TargeterController : MonoBehaviour
     void Start()
     {
         tf = GetComponent<Transform>();
-
+        speed = VariableHolder.targeterSpeed;
     }
 
     // Update is called once per frame

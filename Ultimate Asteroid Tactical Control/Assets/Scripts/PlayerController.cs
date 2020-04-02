@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     public float reverseSpeed;
-    public float turnSpeed = 150;
+    public float turnSpeed;
     private Rigidbody2D rb;
     private Transform tf;
     private float angle = 0.0f;
@@ -16,7 +16,9 @@ public class PlayerController : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        turnSpeed = VariableHolder.playerRotationSpeed;
         //Creating variables for the transform components
+        speed = VariableHolder.playerSpeed;
         rb = GetComponent<Rigidbody2D>();
         tf = GetComponent<Transform>();
         DeathCount.playerAlive = true;
@@ -68,7 +70,7 @@ public class PlayerController : MonoBehaviour
         {
         }
         DeathCount.KilledByCol += 1;
-        DeathCount.PlayerLives -= 1;
+        VariableHolder.playerLives -= 1;
         DeathCount.playerAlive = false;
         Destroy(gameObject, destroyTime);
     }

@@ -15,7 +15,8 @@ public class FloaterController : MonoBehaviour
     void Start()
     {
         tf = GetComponent<Transform>();
-        
+        speed = VariableHolder.floaterSpeed;
+
     }
 
     // Update is called once per frame

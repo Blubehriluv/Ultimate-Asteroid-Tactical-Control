@@ -17,7 +17,7 @@ public class DeathBoxDeath : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerExit2D(Collider2D other)
     {
         if (GameObject.FindGameObjectWithTag("Projectile"))
         {
@@ -30,6 +30,7 @@ public class DeathBoxDeath : MonoBehaviour
             DeathCount.KilledByBox += 1;
             DeathCount.PlayingFieldCount -= 1;
             DeathCount.TotalKilled += 1;
+            Destroy(other.gameObject, destroyTime);
         }
 
         else if (GameObject.FindGameObjectWithTag("Player"))
@@ -37,8 +38,6 @@ public class DeathBoxDeath : MonoBehaviour
             Debug.Log("dont fooken touch me m8");
             DeathCount.KilledByBox += 1;
             DeathCount.playerAlive = false;
-
         }
-        Destroy(other.gameObject, destroyTime);
     }
 }

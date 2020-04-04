@@ -4,6 +4,21 @@ using UnityEngine;
 
 public class VariableHolder : MonoBehaviour
 {
+
+    public static VariableHolder Instance;
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            Instance = this;
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
     public static int targeter_amount;
 
     public static int floater_amount;
@@ -30,7 +45,7 @@ public class VariableHolder : MonoBehaviour
         playerRotationSpeed = 150;
         playerSpeed = 15;
         playerLives = 3;
-        bulletSpeed = 0.5f;
+        bulletSpeed = 15f;
         targeterSpeed = 15;
         floaterSpeed = 15;
     }
@@ -39,81 +54,5 @@ public class VariableHolder : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void IncreaseTargeters()
-    {
-        targeter_amount += 1;
-        totalEntities += 1;
-    }
-    public void DecreaseTargeters()
-    {
-        targeter_amount -= 1;
-        totalEntities -= 1;
-    }
-
-    public void IncreaseFloaters()
-    {
-        floater_amount += 1;
-        totalEntities += 1;
-    }
-    public void DecreaseFloaters()
-    {
-        floater_amount -= 1;
-        totalEntities -= 1;
-    }
-
-    public void IncreaseRotationSpeed()
-    {
-        playerRotationSpeed += 5;
-    }
-    public void DecreaseRotationSpeed()
-    {
-        playerRotationSpeed -= 5;
-    }
-
-    public void IncreasePlayerSpeed()
-    {
-        playerSpeed += 1;
-    }
-    public void DecreasePlayerSpeed()
-    {
-        playerSpeed -= 1;
-    }
-
-    public void IncreasePlayerLives()
-    {
-        playerLives += 1;
-    }
-    public void DecreasePlayerLives()
-    {
-        playerLives -= 1;
-    }
-
-    public void IncreaseBulletSpeed()
-    {
-        bulletSpeed += .1f;
-    }
-    public void DecreaseBulletSpeed()
-    {
-        bulletSpeed -= .1f;
-    }
-
-    public void IncreaseFloaterSpeed()
-    {
-        floaterSpeed += 1;
-    }
-    public void DecreaseFloaterSpeed()
-    {
-        floaterSpeed -= 1;
-    }
-
-    public void IncreaseTargeterSpeed()
-    {
-        targeterSpeed += 1;
-    }
-    public void DecreaseTargeterSpeed()
-    {
-        targeterSpeed -= 1;
     }
 }

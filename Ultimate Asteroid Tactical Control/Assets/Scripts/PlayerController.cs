@@ -62,16 +62,26 @@ public class PlayerController : MonoBehaviour
     {
         if (GameObject.FindGameObjectWithTag("Enemy"))
         {
-            Destroy(gameObject, destroyTime);
+            Debug.Log("Enemy killed a player");
+            DeathCount.KilledByCol += 1;
+            VariableHolder.playerLives -= 1;
             DeathCount.playerAlive = false;
+            Destroy(gameObject, destroyTime);
         }
-
-        else if (GameObject.FindGameObjectWithTag("DeathBox"))
+        else
         {
+            Debug.Log("Something hit me, probably a bullet");
         }
-        DeathCount.KilledByCol += 1;
-        VariableHolder.playerLives -= 1;
-        DeathCount.playerAlive = false;
-        Destroy(gameObject, destroyTime);
+        
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (GameObject.FindGameObjectWithTag("DeathBox"))
+        {
+            Debug.Log("Death box has killed the player");
+            DeathCount.KilledByCol += 1;
+            VariableHolder.playerLives -= 1;
+        }
     }
 }

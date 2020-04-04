@@ -190,7 +190,6 @@ public class EntitySpawn : MonoBehaviour
         else
         {
             Debug.Log("No more enemies to spawn.");
-        }
-        
+        }        
     }
 }

@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1187046846}
+      - m_Target: {fileID: 1187046845}
         m_MethodName: IncreaseFloaterSpeed
         m_Mode: 1
         m_Arguments:
@@ -571,7 +571,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1187046846}
+      - m_Target: {fileID: 1187046845}
         m_MethodName: DecreaseTargeters
         m_Mode: 1
         m_Arguments:
@@ -741,7 +741,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1187046846}
+      - m_Target: {fileID: 1187046845}
         m_MethodName: DecreaseBulletSpeed
         m_Mode: 1
         m_Arguments:
@@ -874,7 +874,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1187046846}
+      - m_Target: {fileID: 1187046845}
         m_MethodName: DecreaseFloaterSpeed
         m_Mode: 1
         m_Arguments:
@@ -934,13 +934,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 259353101}
+  - component: {fileID: 259353102}
   m_Layer: 5
   m_Name: Adjustments
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &259353101
 RectTransform:
   m_ObjectHideFlags: 0
@@ -962,6 +963,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &259353102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 259353100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20bbe7f0104788b439a81054b20b5580, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IncreaseAdjustments: {fileID: 1172468737}
+  DecreaseAdjustments: {fileID: 1122527744}
 --- !u!1 &270546717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,9 +1108,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 259353100}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 259353102}
+        m_MethodName: OnClick
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1579,7 +1594,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1187046846}
+      - m_Target: {fileID: 1187046845}
         m_MethodName: IncreaseRotationSpeed
         m_Mode: 1
         m_Arguments:
@@ -2657,7 +2672,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1187046846}
+      - m_Target: {fileID: 1187046845}
         m_MethodName: DecreasePlayerSpeed
         m_Mode: 1
         m_Arguments:
@@ -3557,7 +3572,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1122527745
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3600,7 +3615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1172468738
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3710,7 +3725,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1187046846}
+      - m_Target: {fileID: 1187046845}
         m_MethodName: IncreasePlayerSpeed
         m_Mode: 1
         m_Arguments:
@@ -3852,7 +3867,7 @@ GameObject:
   - component: {fileID: 1187046843}
   - component: {fileID: 1187046842}
   - component: {fileID: 1187046844}
-  - component: {fileID: 1187046846}
+  - component: {fileID: 1187046845}
   m_Layer: 5
   m_Name: DevPanel
   m_TagString: Untagged
@@ -3942,7 +3957,7 @@ MonoBehaviour:
   BSNum: {fileID: 517890104}
   TSNUm: {fileID: 1884595751}
   FSNum: {fileID: 45252303}
---- !u!114 &1187046846
+--- !u!114 &1187046845
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3951,7 +3966,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1187046840}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a393d22457f65e42b770482055be0bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 8726a1f7cdf9447428cef81ed1e8160d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1188615954
@@ -4668,7 +4683,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1187046846}
+      - m_Target: {fileID: 1187046845}
         m_MethodName: DecreasePlayerLives
         m_Mode: 1
         m_Arguments:
@@ -4798,6 +4813,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414441887}
   m_CullTransparentMesh: 0
+--- !u!1 &1451246842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1451246844}
+  - component: {fileID: 1451246843}
+  m_Layer: 0
+  m_Name: Variables
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1451246843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451246842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a393d22457f65e42b770482055be0bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1451246844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451246842}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.741484, y: 3.795662, z: 81.986404}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1459606035
 GameObject:
   m_ObjectHideFlags: 0
@@ -5090,7 +5148,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1509328614}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1842528262}
+        m_MethodName: OpenScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainLevel
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1509328614
@@ -5463,7 +5532,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1187046846}
+      - m_Target: {fileID: 1187046845}
         m_MethodName: IncreaseFloaters
         m_Mode: 1
         m_Arguments:
@@ -6079,7 +6148,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1187046846}
+      - m_Target: {fileID: 1187046845}
         m_MethodName: DecreaseRotationSpeed
         m_Mode: 1
         m_Arguments:
@@ -6370,7 +6439,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1187046846}
+      - m_Target: {fileID: 1187046845}
         m_MethodName: IncreaseTargeterSpeed
         m_Mode: 1
         m_Arguments:
@@ -6604,7 +6673,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1187046846}
+      - m_Target: {fileID: 1187046845}
         m_MethodName: IncreaseBulletSpeed
         m_Mode: 1
         m_Arguments:
@@ -6665,6 +6734,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1842528260}
   - component: {fileID: 1842528261}
+  - component: {fileID: 1842528262}
   m_Layer: 5
   m_Name: PlayButtonManager
   m_TagString: Untagged
@@ -6705,6 +6775,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 1521288520}
+--- !u!114 &1842528262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842528259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26438abcb8dd8b340b231c12d16de66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1874104992
 GameObject:
   m_ObjectHideFlags: 0
@@ -7020,7 +7102,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1187046846}
+      - m_Target: {fileID: 1187046845}
         m_MethodName: IncreaseTargeters
         m_Mode: 1
         m_Arguments:
@@ -7352,7 +7434,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1187046846}
+      - m_Target: {fileID: 1187046845}
         m_MethodName: DecreaseTargeterSpeed
         m_Mode: 1
         m_Arguments:
@@ -7665,7 +7747,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1187046846}
+      - m_Target: {fileID: 1187046845}
         m_MethodName: IncreasePlayerLives
         m_Mode: 1
         m_Arguments:
@@ -7877,7 +7959,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1187046846}
+      - m_Target: {fileID: 1187046845}
         m_MethodName: DecreaseFloaters
         m_Mode: 1
         m_Arguments:

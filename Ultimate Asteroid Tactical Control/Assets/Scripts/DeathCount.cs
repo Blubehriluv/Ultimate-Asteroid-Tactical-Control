@@ -18,10 +18,9 @@ public class DeathCount : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PlayerLives = VariableHolder.playerLives;
         PlayingFieldCount = 0;
         PlayerLives = VariableHolder.playerLives;
-        playerAlive = false;
+        playerAlive = true;
     }
 
     // Update is called once per frame
@@ -29,7 +28,7 @@ public class DeathCount : MonoBehaviour
     {
         if (playerAlive == false)
         {
-            if (PlayerLives != 0)
+            if (VariableHolder.playerLives != 0)
             {
                 Instantiate(player);
                 Debug.Log("Spawning the player.");

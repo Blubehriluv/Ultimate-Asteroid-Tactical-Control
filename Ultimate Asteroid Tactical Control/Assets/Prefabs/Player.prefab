@@ -39,7 +39,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1556597501347860262}
-  - component: {fileID: 1556597501347860263}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -62,20 +61,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1556597501347860263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1556597501347860260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42a8a846128179c49bf937fd94b2cf8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 7886651899184230100, guid: 251ea668a8573e04b8a29f9673d1329e, type: 3}
-  spawnPoint: {fileID: 1556597500823793231}
 --- !u!1 &1556597501352160831
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,6 +76,7 @@ GameObject:
   - component: {fileID: 1556597501352160817}
   - component: {fileID: 7365826369786935055}
   - component: {fileID: 4382161217444996464}
+  - component: {fileID: 7468733709042720764}
   m_Layer: 0
   m_Name: Red Dragon
   m_TagString: Untagged
@@ -271,3 +257,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.51, y: 1.08}
   m_EdgeRadius: 0
+--- !u!114 &7468733709042720764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556597501352160831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42a8a846128179c49bf937fd94b2cf8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 7886651899184230100, guid: 251ea668a8573e04b8a29f9673d1329e, type: 3}
+  spawnPoint: {fileID: 1556597500823793231}
